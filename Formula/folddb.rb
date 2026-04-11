@@ -6,17 +6,17 @@ class Folddb < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/EdgeVector/fold_db_node/releases/download/v0.3.0/folddb-aarch64-apple-darwin.tar.gz"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.0/folddb-aarch64-apple-darwin.tar.gz"
       sha256 "cf4224b2a49d00560b77543352886552b2daa6c1bc2209e615a748e9da859303"
     else
-      url "https://github.com/EdgeVector/fold_db_node/releases/download/v0.3.0/folddb-x86_64-apple-darwin.tar.gz"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.0/folddb-x86_64-apple-darwin.tar.gz"
       sha256 "e21985b9fa6a443f8a1b9e7b7d1024be825544033b1f562c27d27f0b208b97a4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/EdgeVector/fold_db_node/releases/download/v0.3.0/folddb-x86_64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.0/folddb-x86_64-unknown-linux-gnu.tar.gz"
       sha256 "ce92303379fb852b97f5bdd33dce8e5bdf2c4646b5aa4ef72db84861c9f0e428"
     end
   end
