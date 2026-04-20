@@ -1,6 +1,14 @@
 class Folddb < Formula
   desc "Local-first database for personal data sovereignty"
   homepage "https://folddb.com"
+  # Explicit version is required because Homebrew's URL version scanner
+  # misparses the Linux tarball filename (`folddb-x86_64-unknown-linux-gnu.tar.gz`)
+  # and extracts `64-unknown-linux-gnu` as the version — landing the Cellar at
+  # `Cellar/folddb/64-unknown-linux-gnu/` instead of `Cellar/folddb/0.3.1/`.
+  # On macOS the scanner produces `0.3.1` correctly from the `/v0.3.1/` path
+  # segment, so `brew audit --strict` reports this as redundant there — accept
+  # that warning: the alternative (wrong Linux Cellar path) is worse.
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
