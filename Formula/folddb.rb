@@ -1,30 +1,23 @@
 class Folddb < Formula
   desc "Local-first database for personal data sovereignty"
   homepage "https://folddb.com"
-  # Explicit version is required because Homebrew's URL version scanner
-  # misparses the Linux tarball filename (`folddb-x86_64-unknown-linux-gnu.tar.gz`)
-  # and extracts `64-unknown-linux-gnu` as the version — landing the Cellar at
-  # `Cellar/folddb/64-unknown-linux-gnu/` instead of `Cellar/folddb/0.3.6/`.
-  # On macOS the scanner produces `0.3.6` correctly from the `/v0.3.6/` path
-  # segment, so `brew audit --strict` reports this as redundant there — accept
-  # that warning: the alternative (wrong Linux Cellar path) is worse.
-  version "0.3.6"
+  version "0.3.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.6/folddb-aarch64-apple-darwin.tar.gz"
-      sha256 "7186e24171c5fe3391ef54a1b3ee229105ffd1d0c5c315b37ab94c2d0e23f927"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.7/folddb-aarch64-apple-darwin.tar.gz"
+      sha256 "80bae9db4eeb244c927dab852721182ed3f880f4932839336683900d0eef467f"
     else
-      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.6/folddb-x86_64-apple-darwin.tar.gz"
-      sha256 "ad59c4a24a5716f296ca2efc612800d712f64f2b6212d79ddf2d7e13ad0b5783"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.7/folddb-x86_64-apple-darwin.tar.gz"
+      sha256 "453aea35bab4d8e21ff453e85e9f1233488bd0e12117b976837c57c948430f3e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.6/folddb-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1b3837ff908f923ae8a01213c7650ae0d711c0c1e1e2d338a532a9117ccf1b61"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.7/folddb-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "015c0c83579eac7cfffc09c406ece7d0068833bfa02d38c68fc0387a4baa30e5"
     end
   end
 
