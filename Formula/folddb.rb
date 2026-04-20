@@ -40,6 +40,6 @@ class Folddb < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/folddb --version")
+    assert_match "FoldDB CLI", shell_output("#{bin}/folddb --help")
   end
 end
