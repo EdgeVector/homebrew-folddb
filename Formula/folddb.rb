@@ -4,27 +4,27 @@ class Folddb < Formula
   # Explicit version is required because Homebrew's URL version scanner
   # misparses the Linux tarball filename (`folddb-x86_64-unknown-linux-gnu.tar.gz`)
   # and extracts `64-unknown-linux-gnu` as the version — landing the Cellar at
-  # `Cellar/folddb/64-unknown-linux-gnu/` instead of `Cellar/folddb/0.3.1/`.
-  # On macOS the scanner produces `0.3.1` correctly from the `/v0.3.1/` path
+  # `Cellar/folddb/64-unknown-linux-gnu/` instead of `Cellar/folddb/0.3.6/`.
+  # On macOS the scanner produces `0.3.6` correctly from the `/v0.3.6/` path
   # segment, so `brew audit --strict` reports this as redundant there — accept
   # that warning: the alternative (wrong Linux Cellar path) is worse.
-  version "0.3.1"
+  version "0.3.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.1/folddb-aarch64-apple-darwin.tar.gz"
-      sha256 "75f9e6b07b89b2d727d7b4bab15cb997d63ffe10fb2b79984ce4550ba15d9e53"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.6/folddb-aarch64-apple-darwin.tar.gz"
+      sha256 "7186e24171c5fe3391ef54a1b3ee229105ffd1d0c5c315b37ab94c2d0e23f927"
     else
-      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.1/folddb-x86_64-apple-darwin.tar.gz"
-      sha256 "c6729d644d7a310667deb93dcc0329a36f45eba8a1fc06fcc5c9e14463f4bdd1"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.6/folddb-x86_64-apple-darwin.tar.gz"
+      sha256 "ad59c4a24a5716f296ca2efc612800d712f64f2b6212d79ddf2d7e13ad0b5783"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.1/folddb-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "58cc3edc07fbeedbf3c59fa88866491d669599b89cee7a983a15671c912ed4b5"
+      url "https://github.com/EdgeVector/fold_db/releases/download/v0.3.6/folddb-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1b3837ff908f923ae8a01213c7650ae0d711c0c1e1e2d338a532a9117ccf1b61"
     end
   end
 
