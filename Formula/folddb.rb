@@ -24,7 +24,6 @@ class Folddb < Formula
   def install
     bin.install "folddb"
     bin.install "folddb_server"
-    bin.install "schema_service"
   end
 
   def caveats
