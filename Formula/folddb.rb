@@ -28,12 +28,21 @@ class Folddb < Formula
   end
 
   def install
-    bin.install "folddb"
-    bin.install "folddb_server"
+    # IMPORTANT: install the REAL `lastdb` / `lastdb_server` binaries, not the
+    # tiny `folddb*` shims. The release tarball ships both: `folddb*` are
+    # back-compat shims that re-exec their same-directory `lastdb*` sibling.
+    # Installing the shim as `folddb` and then symlinking `lastdb -> folddb`
+    # (the previous, broken layout) made the shim re-exec itself forever — an
+    # infinite `exec` loop that hung silently on every invocation, including
+    # `folddb --version` (brew 0.15.0/0.16.x headless-start hang). Mirror the
+    # `lastdb` formula: install the real binaries, then point the old `folddb*`
+    # names at them via symlink.
+    bin.install "lastdb"
+    bin.install "lastdb_server"
 
-    # Forward-compat: also expose the new `lastdb` / `lastdb_server` names.
-    bin.install_symlink "folddb" => "lastdb"
-    bin.install_symlink "folddb_server" => "lastdb_server"
+    # Back-compat: keep the old `folddb` / `folddb_server` command names working.
+    bin.install_symlink "lastdb" => "folddb"
+    bin.install_symlink "lastdb_server" => "folddb_server"
   end
 
   service do
