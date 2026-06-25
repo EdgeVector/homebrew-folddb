@@ -1,6 +1,6 @@
 class FolddbDev < Formula
   desc "FoldDB developer node — local dev/test node for building FoldDB apps"
-  homepage "https://folddb.com"
+  homepage "https://thelastdb.com"
   version "0.3.0"
 
   # Assets live on this repo's `folddb-dev-v*` mirror releases (the source

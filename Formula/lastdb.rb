@@ -1,6 +1,6 @@
 class Lastdb < Formula
   desc "Local-first database for personal data sovereignty"
-  homepage "https://folddb.com"
+  homepage "https://thelastdb.com"
   version "0.19.0"
   license "Apache-2.0"
 

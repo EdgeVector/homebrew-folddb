@@ -103,6 +103,6 @@ lives in the monorepo on its own `folddb-dev-v*` tag line, separate from
 
 ## Links
 
-- [LastDB Website](https://folddb.com)
+- [LastDB Website](https://thelastdb.com)
 - [GitHub](https://github.com/EdgeVector/fold)
 - [Documentation](https://edgevector.com/docs)

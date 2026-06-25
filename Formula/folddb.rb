@@ -6,7 +6,7 @@ class Folddb < Formula
   # binaries (the release tarball ships `lastdb`/`lastdb_server` and the legacy
   # `folddb`/`folddb_server` names).
   desc "Local-first database for personal data sovereignty (renamed to lastdb)"
-  homepage "https://folddb.com"
+  homepage "https://thelastdb.com"
   version "0.19.0"
   license "Apache-2.0"
 
