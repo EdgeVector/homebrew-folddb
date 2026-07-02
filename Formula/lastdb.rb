@@ -1,23 +1,23 @@
 class Lastdb < Formula
   desc "Local-first database for personal data sovereignty"
   homepage "https://thelastdb.com"
-  version "0.20.11"
+  version "0.20.12"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/EdgeVector/homebrew-folddb/releases/download/v0.20.11/lastdb-aarch64-apple-darwin.tar.gz"
-      sha256 "9ca2891b78816b6d2187935062257759cd7967eaeb1d46749234b485ae843c45"
+      url "https://github.com/EdgeVector/homebrew-folddb/releases/download/v0.20.12/lastdb-aarch64-apple-darwin.tar.gz"
+      sha256 "e245982c858a69cdd5b8fa82bc0592735cea9ee0da03eef77cf66f338d0d5815"
     else
-      url "https://github.com/EdgeVector/homebrew-folddb/releases/download/v0.20.11/lastdb-x86_64-apple-darwin.tar.gz"
-      sha256 "bffa563f612807909912ec7d57851f3ccf5f7310ddb7a5971d2e2dcc24c6a254"
+      url "https://github.com/EdgeVector/homebrew-folddb/releases/download/v0.20.12/lastdb-x86_64-apple-darwin.tar.gz"
+      sha256 "5a6bf172251ef794b5e23313151b87aa2b330bf532d252f84fab74ba19fc917a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/EdgeVector/homebrew-folddb/releases/download/v0.20.11/lastdb-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4925b24e62699a7915522008ff9ba07f84216da7de7278dd696b4285d8973f19"
+      url "https://github.com/EdgeVector/homebrew-folddb/releases/download/v0.20.12/lastdb-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ffa5fb54132cf74852392302f3371dd35e619518f91238ed7eeba09271d212b6"
     end
   end
 
